@@ -115,7 +115,7 @@ margin: 10px 0 10px;
 min-height:22px;
 }
 .chat form .typing {
-    bottom: 82%;
+    bottom: 100%;
     width: auto;
     left:auto;
     padding-left:5px;
@@ -125,7 +125,7 @@ min-height:22px;
     border-radius: 5px 0 0 0;
     border-top: 1px hsla(0,0%,100%,.06) solid;
     border-left: 1px hsla(0,0%,100%,.06) solid;
-    background-color:#2c2c2c!important;
+    background-color:#1f1f1f!important;
 }
 .typing .text {
     padding-right:5px;
@@ -399,6 +399,17 @@ font-size: 13px!important
     margin-left:6px!important;
 }
 
+.jump-to-present-bar {
+    background-color:#1f1f1f!important;
+    left:0!important;
+    right:auto!important;
+    border-radius:0 5px 0!important;
+    border-top: 1px hsla(0,0%,100%,.06) solid;
+    border-right: 1px hsla(0,0%,100%,.06) solid;
+}
+.jump-to-present-bar button:nth-child(1) {
+    color: #f04747!important;
+}
 /* Tweaks to User Popout */
 .kawaii-tag.kawaii-tag-invert {
     color:#1f1f1f!important;
@@ -472,6 +483,9 @@ font-size: 13px!important
     opacity:.9;
     border-bottom: 2px solid #3A71C1!important;
 }
+.tab-bar.TOP .tab-bar-item {
+    color:#8f8f8f!important;
+}
 #user-profile-modal .scroller.guilds .guild:hover {
     background:#3f3f3f!important;
     color:#fff;
@@ -524,7 +538,18 @@ span.icon.icon-notes, span.icon.icon-roles{display:none;}
     background-color:#3A71C1!important;
 }
 .messages-wrapper .new-messages-bar {
-    background-color: rgba(58, 113, 193, .85)
+    background-color: #f04747;
+    opacity: .85;
+    right:auto;
+    left:0;
+    border-radius:0 0 5px 0;
+}
+.messages-wrapper .new-messages-bar:hover {
+    opacity: 1;
+    background-color: #f04747!important;
+}
+.new-messages-bar button:nth-child(2) {
+    color:#fff!important;
 }
 .upload-modal .footer .button {
     background-color:rgba(0,0,0,0)!important;
@@ -1086,4 +1111,12 @@ body{background: #1f1f1f;}
     width:0;
     transition:width 100ms linear;
 }
+
+/* Fixes emoji menu (some users don't know this fix, so it's here for convenience) */
+.emoji-picker .scroller .emoji-item.selected {
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    -webkit-background-size: contain !important;
+    -moz-background-size: contain !important;
+    background-size: contain !important;
 }
