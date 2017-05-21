@@ -12,7 +12,6 @@
     For the full theme experience, turn on "BetterDiscord Blue" in Settings > BetterDiscord > Core > Betterdiscord Blue.
 */
 
-
 .message-group .avatar-large {
     transition: all 0.2s ease-in-out !important;
     opacity: 1 !important;
@@ -72,18 +71,6 @@
     border: none !important;
     box-shadow: none;
 }
-.badge  {
-    position:absolute;
-    bottom:-2px;
-    left:-15px;
-    background:transparent;
-    box-shadow:none;
-    color:#f04747;
-    font-weight:bold;
-}
-.guild-channels .badge {
-    left:-12px;
-}
 
 .channel-textarea {
     margin: 0;
@@ -96,6 +83,12 @@
     border: none !important;
 }
 
+.header-toolbar button:nth-of-type(3),
+.header-toolbar button:nth-of-type(4),
+.header-toolbar button:last-of-type,
+.header-toolbar .separator {
+/    display: none;
+}
 
 .channel-textarea-inner {
     border: none;
@@ -105,6 +98,13 @@
 
 .guilds-wrapper {
     padding-top: 10px !important;
+}
+
+.osx-buttons, .win-buttons {
+/    display: none;
+}
+.header-toolbar{
+	margin-right:70px;
 }
 
 /**/
@@ -125,19 +125,13 @@ min-height:22px;
     border-radius: 5px 0 0 0;
     border-top: 1px hsla(0,0%,100%,.06) solid;
     border-left: 1px hsla(0,0%,100%,.06) solid;
-    background-color:#1f1f1f!important;
+    box-shadow: 0 -1px 0 rgba(0,0,0,.1);
 }
-.typing .text {
-    padding-right:5px;
+.chat form .typing:hover {
+    height: 0px;
 }
 /*end*/
 
-#autocomplete-popout .row {
-    background-color: #2f2f2f;
-}
-#autocomplete-popout .row.selected {
-    background-color: #3f3f3f!important;
-}
 .theme-dark .channel-textarea-inner .channel-textarea-upload:hover{
     background-color:hsla(0,0%,100%,.0);
 }
@@ -221,8 +215,7 @@ min-height:22px;
     height: 105% !important;
 }*/
 
-.guild-selected {background:transparent!important;}
-.guilds:hover > .guild.selected .avatar-small {
+.guild.selected .avatar-small {
     animation-name: spin;
     animation-duration: 2s;
     animation-iteration-count: infinite!important;
@@ -280,7 +273,34 @@ min-height:22px;
     overflow-y:auto;
 }
 
+.guilds-wrapper .guilds .friends-online, .guilds-wrapper .guilds .friends-icon {
+    display: none;
+}
 
+.guilds-wrapper .guilds > .guild:first-child {
+    height: 25px;
+}
+
+.guilds-wrapper .guilds > .guild:first-child:after {
+    content: "DM's";
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgba(255,255,255,.3);
+    margin-top: 5px;
+    word-wrap: normal;
+    white-space: normal;
+    width: 100%;
+    line-height: 130%;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.guilds-wrapper .guilds .friends-online, .guilds-wrapper .guilds .friends-icon {
+    display: none;
+}
 .guilds-wrapper .guilds > .guild:first-child .guild-inner {
     height: 20px !important;
     background-color: transparent !important;
@@ -298,9 +318,6 @@ div.member-activity {
     text-overflow: ellipsis
 }
 
-.ui-scroller-wrap .scroller::-webkit-scrollbar {
-    display:none;
-}
 .message-group {
   animation-name: testslide;
   animation-duration: .5s;
@@ -399,131 +416,6 @@ font-size: 13px!important
     margin-left:6px!important;
 }
 
-.jump-to-present-bar {
-    background-color:#1f1f1f!important;
-    left:0!important;
-    right:auto!important;
-    border-radius:0 5px 0!important;
-    border-top: 1px hsla(0,0%,100%,.06) solid;
-    border-right: 1px hsla(0,0%,100%,.06) solid;
-}
-.jump-to-present-bar button:nth-child(1) {
-    color: #f04747!important;
-}
-/* Tweaks to User Popout */
-.kawaii-tag.kawaii-tag-invert {
-    color:#1f1f1f!important;
-}
-.user-popout .avatar-popout {
-    border-color:#3f3f3f!important;
-}
-
-#user-profile-modal .header, #user-profile-modal .tab-bar-container, #user-profile-modal .avatar-wrapper, #user-profile-modal .scroller.guilds {
-    background:#2f2f2f!important;
-}
-#user-profile-modal .header:after {
-    background-image:none;
-}
-.user-popout .header, .user-popout .body, .user-popout .footer, .quick-message, .note textarea, #user-profile-modal .empty {
-    background-color: #2f2f2f!important;
-}
-#user-profile-modal .empty-text {
-    color:#dfdfdf!important;
-}
- .note textarea {
-    color:#dfdfdf;
- }
-
-.user-popout .header .username-wrapper .discord-tag span,
-.user-popout .header .username-wrapper .activity,
-.section.roles .label, .section.notes .label,
-.protip.inline .tip,
-#user-profile-modal .discord-tag span,
-#user-profile-modal .activity,
-#user-profile-modal .section .section-header,
-.connected-account-name {
-    color:#fff!important;
-    opacity: .9;
-}
-.user-popout .member-roles .member-role {
-    background: #3f3f3f;
-    color:#cfcfcf;
-    border-color:#afafaf;
-}
-.connected-account-open-icon {
-    filter:brightness(2);
-    filter:contrast(5);
-}
-.avatar-profile .status {
-    border: 2px solid white;
-    width: 20px;
-    height: 20px;
-    bottom: 0px;
-    right: 0px;
-}
-#user-profile-modal .scroller.guilds .section:nth-child(2) {
-    border-top: 1px solid #3f3f3f;
-}
-#user-profile-modal .guilds .section .connected-accounts .connected-account {
-    border: 1px solid #4f4f4f!important;
-}
-.guilds .connected-accounts div:nth-child(2) {
-    -webkit-box-align: left;
-    align-items:left;
-
-}
-#user-profile-modal .avatar-profile {
-    border-radius:5px;
-}
-.tab-bar-container {
-    border-bottom: 1px solid #3f3f3f!important;
-}
-.tab-bar.TOP .tab-bar-item.selected {
-    color:#fff!important;
-    opacity:.9;
-    border-bottom: 2px solid #3A71C1!important;
-}
-.tab-bar.TOP .tab-bar-item {
-    color:#8f8f8f!important;
-}
-#user-profile-modal .scroller.guilds .guild:hover {
-    background:#3f3f3f!important;
-    color:#fff;
-}
-#user-profile-modal .scroller.guilds .guild {
-    color:#fff!important;
-}
-.popout.popout-bottom .context-menu {
-    background:#2f2f2f!important;
-}
-.popout.popout-bottom .item:hover {
-    background:#3f3f3f;
-}
-.popout.popout-bottom .item:not(danger) {
-    color:#fff;
-}
-
-.quick-message {
-    color:#fff;
-    border: 1px solid #3f3f3f;
-}
-
-.member-role.member-role-add {
-    background:#3f3f3f;
-}
-span.icon.icon-notes, span.icon.icon-roles{display:none;}
-.kawaii-tag.kawaii-tag-invert {
-    color:#1f1f1f!important;
-}
-
-.user-popout .footer, .user-popout .body {
-    border-top: 1px solid #3f3f3f;
-}
-
-.message .image {
-    border-radius:5px;
-}
-
 /* Fixes Blurple */
 
 .user-popout .avatar-wrapper .avatar-popout {
@@ -538,18 +430,7 @@ span.icon.icon-notes, span.icon.icon-roles{display:none;}
     background-color:#3A71C1!important;
 }
 .messages-wrapper .new-messages-bar {
-    background-color: #f04747;
-    opacity: .85;
-    right:auto;
-    left:0;
-    border-radius:0 0 5px 0;
-}
-.messages-wrapper .new-messages-bar:hover {
-    opacity: 1;
-    background-color: #f04747!important;
-}
-.new-messages-bar button:nth-child(2) {
-    color:#fff!important;
+    background-color: rgba(58, 113, 193, .85)
 }
 .upload-modal .footer .button {
     background-color:rgba(0,0,0,0)!important;
@@ -597,11 +478,12 @@ span.icon.icon-notes, span.icon.icon-roles{display:none;}
 }
 
 .user-popout .body ::-webkit-scrollbar {
-    width: 8px; }
+    width: 12px; }
 .user-popout .body ::-webkit-scrollbar-thumb,
 .user-popout .body ::-webkit-scrollbar-track-piece{
     background-color: #3a71c1;
     background-clip: padding-box;
+    border: 3px solid #fff;
     border-radius: 7px; }
 .user-popout .body ::-webkit-scrollbar-track-piece {
     background-color: transparent; }
@@ -698,6 +580,7 @@ div.react-datepicker__day.react-datepicker__day--outside-month {
     transition:width 250ms ease;
     border:none;
     border-radius:0;
+    border-left:1px solid #1c1e22;
 }
 .channels-wrap .account .btn-group{
     position: absolute;
@@ -708,9 +591,7 @@ div.react-datepicker__day.react-datepicker__day--outside-month {
     transition:width 250ms ease;
     border:none;
     border-radius:0;
-}
-.channels-wrap .account .btn-group .btn {
-    border-left: 1px solid #3f3f3f;
+    border-left:1px solid #1c1e22;
 }
 .channels-wrap .account:hover .btn-group,
 .channels-wrap #rtc-connection:hover+.account .btn-group,
@@ -975,6 +856,8 @@ body{background: #1f1f1f;}
 
 .friends-table .messages .divider span,.friends-table .messages .divider:before,.messages-wrapper .messages .divider span,.messages-wrapper .messages .divider:before{background-color:#1f1f1f !important;}
 
+.chat form .typing{background-color:transparent !important;}
+
 .guilds-wrapper .btn-download-apps{display:none;}
 
 /*Scrollbar*/
@@ -1074,10 +957,7 @@ body{background: #1f1f1f;}
 .modal {counter-reset: servercount;} /* thanks for the intel about counters in css zerthox */
 .modal .guild:before {counter-increment: servercount;content:counter(servercount);width:20px;padding:0 2px 0 4px;margin:-10px 6px -10px -20px;font-size:12px;line-height:50px;border-right:1px solid rgba(100,100,100,.2);}
 .modal .guild:hover:before {background:linear-gradient(to right,rgba(190,190,190,.09) 23px,rgba(190,190,190,.02) 26px);}
-
-
-/* MoreThanTom's intellihide buttons and search bar */
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
 .avatar-large {
     display:none;
 }
@@ -1100,7 +980,7 @@ body{background: #1f1f1f;}
 .header-toolbar button:first-child+button{
     transition:width 100ms linear;
     overflow:hidden;
-    margin:0;
+	margin:0;
     width:38px;
     display:flex;
     justify-content:flex-end;
@@ -1108,15 +988,7 @@ body{background: #1f1f1f;}
 .header-toolbar .separator+button:not(:hover)+button:not(:hover),
 .header-toolbar button:first-child:not(:hover)+button:not(:hover)+button:not(:hover),
 .header-toolbar button:first-child:not(:hover)+button:not(:hover){    
-    width:0;
+	width:0;
     transition:width 100ms linear;
 }
-
-/* Fixes emoji menu (some users don't know this fix, so it's here for convenience) */
-.emoji-picker .scroller .emoji-item.selected {
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    -webkit-background-size: contain !important;
-    -moz-background-size: contain !important;
-    background-size: contain !important;
 }
