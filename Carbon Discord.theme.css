@@ -204,14 +204,15 @@
 margin: 10px 0 10px;
 }
 .theme-dark .channel-textarea-inner textarea {
-min-height:22px;
+min-height:42px;
 }
+
 .app .chat form .typing {
 	background-color:#2C2C2C;
     bottom: 100%;
     width: auto;
     left:auto;
-    padding:5px 0;
+    padding:0 5px;
     right:0px;
     opacity: 1;
     transition: height 200ms ease-out;
@@ -1625,7 +1626,7 @@ span.icon.icon-notes, span.icon.icon-roles{display:none;}
     font-size:0px;
 }
 
-.badge  {
+.guild .badge{
     position:absolute;
     bottom:-2px;
     left:-10px;
@@ -1636,10 +1637,6 @@ span.icon.icon-notes, span.icon.icon-roles{display:none;}
 }
 .guild-channels .badge {
     left:-12px;
-}
-.theme-dark .channel-textarea-inner textarea{
-	min-height:42px;
-	align-items:center;
 }
 .channel-textarea{
 	margin:0;
@@ -1676,7 +1673,9 @@ div.discord-tag.kawaii-tagged > span.kawaii-tag.kawaii-tag-invert {
 }
 .channel-members:not(:hover) >h2, .channel-members:not(:hover) .member{
 padding-left:15px;
-transition: padding 300ms ease;
+}
+.channel-members >h2, .channel-members .member{
+    transition:all 300ms ease-in;
 }
 /*end*/
 @media screen and (max-width: 750px) {
@@ -1745,4 +1744,68 @@ transition: padding 300ms ease;
 .channel-members:hover{
     transform:translate(-230px);
 }
+}
+.header-toolbar:after{
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-right: 10px solid #aeafb1;        
+    border-left: 0px solid transparent;
+    content: "";
+    background: transparent;
+    border-radius: 5px;
+    transition: transform .25s;
+}
+
+.header-toolbar:hover:after {
+    transform: scaleX(-1);
+}
+
+.header-toolbar{
+    max-width: 10px;
+    overflow: hidden;
+    transition:max-width .5s ease-in-out;
+    justify-content:flex-end;
+    z-index:200;
+    background-color:#1a1a1a;
+    padding:3px 0;
+    padding-right:110px;
+    padding-left:15px;
+    border-radius:0;
+	margin:0;
+    height:34px;
+	position:absolute;
+	top:0;
+	right:0;
+}
+.header-toolbar:hover {
+    max-width:calc(100% - 125px);
+}
+.header-toolbar button,
+.header-toolbar .separator,
+.header-toolbar:after{
+	order:1
+}
+.header-toolbar .search{
+	margin-left:0;
+}
+.header-toolbar button:nth-of-type(1){
+	margin-left:8px;
+}
+.chat .title-wrap{
+	min-height:40px;
+}
+.win-buttons
+.osx-buttons,
+.private-channels .search-bar,
+.guild-header{
+    min-height:40px;
+    height:40px;
+}
+
+.guild-header header{
+    height:40px;
+    padding:0px 24px;
+}
+.guilds-wrapper .guilds{
+	padding-top:10px;
 }
