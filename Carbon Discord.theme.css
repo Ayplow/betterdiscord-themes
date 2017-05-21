@@ -265,7 +265,6 @@ min-height:22px;
     border-radius: 5px 0 0 0;
     border-top: 1px solid #171717;
     border-left: 1px solid #171717;
-    border-bottom:1px solid #2c2c2c;
     box-shadow: 0 -1px 0 rgba(0,0,0,.1);
 }
 .typing .text {
@@ -275,6 +274,9 @@ min-height:22px;
     margin: 0;
     border-top:1px solid rgba(0, 0, 0, 0.25)!important;
     box-shadow: none;
+}
+.theme-dark .channel-textarea-inner{
+    background-color:#2c2c2c;
 }
 .chat form .typing:hover {
     height: 0px;
@@ -783,7 +785,7 @@ div.react-datepicker__day.react-datepicker__day--outside-month {
 }
 .modal-image .download-button {
     display: block;
-    top:2px;
+    top:3px;
     padding:0px;
     position:relative;
     text-align: center;
