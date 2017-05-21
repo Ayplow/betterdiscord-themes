@@ -7,61 +7,47 @@
         maple#1234
         Awakening#1929
         and others! (If you want credit and you had a part in this theme's development, message me with the bit that you contributed.)
-
     For the full theme experience, turn on "BetterDiscord Blue" in Settings > BetterDiscord > Core > Betterdiscord Blue.
 */
 
 
 /*All deleted code
-
 .message-group .avatar-large {
     transition: all 0.2s ease-in-out !important;
     opacity: 1 !important;
 }
-
 .message-group .avatar-large:hover {
     border-radius: 10px !important;
 }
-
 .message-group {
     border: none;
 }
 .osx-buttons, .win-buttons {
     display: none;
 }
-
-
 .header-toolbar button:nth-of-type(3),
 .header-toolbar button:nth-of-type(4),
 .header-toolbar button:last-of-type,
 .header-toolbar .separator {
     display: none;
 }
-
 .chat form .typing{background-color:transparent !important;}
-
-
 .new-messages-indicator.new-messages-indicator-mention:not(.bottom) {
     top:0px;
 }
 .new-messages-indicator.new-messages-indicator-mention.bottom {
     bottom:10px;
 }
-
-
 .chat {
     z-index: 1;
     margin-left: 20px;
 }
 .app :-webkit-any(.member,.channel,.account) .status::before {content:'';position:absolute;display:block;width:100%;height:10px;top:-2px;left:-2px;background:transparent;border:2px solid #1f1f1f;filter:brightness(86%);border-radius:100px;}
-
 .guilds-wrapper {
     position: absolute;
     z-index: 3;
     height: 100%;
 }
-
-
 .channels-wrap {
     z-index: 2;
     position: absolute;
@@ -73,11 +59,9 @@
     transition: all 0.2s ease-in-out !important;
     opacity: 1 !important;
 }
-
 .guilds-wrapper:hover {
     width: 70px !important;
 }
-
 .scroller-wrap ::-webkit-scrollbar {
     display:none!important;
 }
@@ -85,19 +69,12 @@
     width: 10px !important;
     transition: all 0.2s ease-in-out !important;
 }
-
 .channels-wrap:hover {
     width: 240px !important;
 }
-
 .guilds-wrapper:hover ~ .channels-wrap {
     left: 70px;
 }
-
-
-
-
-
 .channels-wrap .account, .channels-wrap #rtc-connection {
     transition: all 0.2s ease-in-out;
     margin-left: -20px;
@@ -105,22 +82,16 @@
     height: 0;
     overflow: hidden;
 }
-
 .channels-wrap:hover .account {
     width: 220px;
     height: 70px;
     margin-left: 0px;
 }
-
-
 .channels-wrap:hover #rtc-connection {
     width: 220px;
     height: 36px;
     margin-left: 0px;
 }
-
-
-
 .channels-wrap #rtc-connection,
 .channels-wrap .account{
     position:relative;
@@ -202,23 +173,6 @@
 .channel-textarea-upload,
 .channel-textarea-upload:hover {
    border: none !important;
-}
-.channel-members-wrap {
-    height: calc(100% - 56px);
-    width: 10px !important;
-    min-width: 0;
-    transition: all 0.2s ease-in-out !important;
-    right: 0;
-    position: absolute;
-    z-index: 1;
-}
-
-.channel-members-wrap:hover {
-    min-width: 240px !important;
-    z-index: 1;
-}
-.chat:not(.private) > .content {
-    margin-right: 10px;
 }
 
 .chat form {
@@ -416,11 +370,6 @@ min-height:22px;
     left: 0px;
     z-index: 999999;
     height: 20px;
-}
-
-div.member-activity {
-    text-align:right;
-    text-overflow: ellipsis
 }
 
 .message:not(.message-sending):not(.message-send-failed) {
@@ -1354,41 +1303,7 @@ body{
 .modal .guild:hover:before {
 	background:linear-gradient(to right,rgba(190,190,190,.09) 23px,rgba(190,190,190,.02) 26px);
 	}
-@media screen and (max-width: 950px) {
-.avatar-large {
-    display:none;
-}
-.header-toolbar{
-    display:flex;
-    justify-content:flex-end;
-}
-.search-bar{
-    display:flex;
-    justify-content:flex-end;
-    transition:width 100ms linear;
-    overflow:hidden;    
-}
-.header-toolbar .search:not(.focused):not(.open) .search-bar:not(:hover):not(:focus):not(:active){
-    width:30px;
-    transition:width 100ms linear;
-}
-.header-toolbar .separator+button+button,
-.header-toolbar button:first-child+button+button,
-.header-toolbar button:first-child+button{
-    transition:width 100ms linear;
-    overflow:hidden;
-	margin:0;
-    width:38px;
-    display:flex;
-    justify-content:flex-end;
-}
-.header-toolbar .separator+button:not(:hover)+button:not(:hover),
-.header-toolbar button:first-child:not(:hover)+button:not(:hover)+button:not(:hover),
-.header-toolbar button:first-child:not(:hover)+button:not(:hover){    
-	width:0;
-    transition:width 100ms linear;
-}
-}
+
 /**/
 .channel-members .avatar-small .status,
 .private-channels .avatar-small .status,
@@ -1486,24 +1401,7 @@ body{
 	position:relative;
     border-right:1px solid rgba(0, 0, 0, 0.25);
 }
-@media screen and (max-width: 640px) {
-.account {
-	transition: transform 300ms ease;
-    transform:translate(-230px);
-}
-#rtc-connection:hover+.account,
-.account:hover {
-	transition: transform 300ms ease;
-    transform:translate(0px);
-}
-.chat form {
-	transition: all 300ms ease;
-	margin-left:0px;
-}
-.guild-channels-wrapper:hover {
-	border-radius: 0 0 5px 0;
-}
-}
+
 #rtc-connection {
 	transition: transform 300ms ease;
     transform:translate(0px);
@@ -1726,17 +1624,7 @@ span.icon.icon-notes, span.icon.icon-roles{display:none;}
     height:10px;
     font-size:0px;
 }
-@media screen and (max-width: 500px) {
-.flex-vertical .guilds-wrapper {
-    width: 10px;
-    min-width: 0!important;
-    transition: all 300ms ease;
-	z-index:10;
-}
-.guilds-wrapper:hover {
-    width: 70px;
-}
-}
+
 .badge  {
     position:absolute;
     bottom:-2px;
@@ -1766,4 +1654,95 @@ div.discord-tag.kawaii-tagged > span.kawaii-tag.kawaii-tag-invert {
 }
 .theme-dark .channel-textarea-inner{
 	background-color:#2c2c2c;
+}
+/*Shrink Channel Members*/
+.channel-members-wrap{
+    width:60px;
+    min-width:60px;
+}
+.channel-members{
+    transform:translate(0px);
+    z-index:1;
+	width:240px;
+    transition:transform 300ms ease;
+}
+.channel-members:hover{
+    transform:translate(-180px);
+}
+.channel-members:not(:hover) .member .member-activity,
+.channel-members:not(:hover) .member .member-username-inner{
+    opacity:0;
+    transition:opacity 300ms ease;
+}
+.channel-members:not(:hover) >h2, .channel-members:not(:hover) .member{
+padding-left:15px;
+transition: padding 300ms ease;
+}
+/*end*/
+@media screen and (max-width: 750px) {
+.avatar-large {
+    display:none;
+}
+.header-toolbar{
+    display:flex;
+    justify-content:flex-end;
+}
+.search-bar{
+    display:flex;
+    justify-content:flex-end;
+    transition:width 100ms linear;
+    overflow:hidden;    
+}
+.header-toolbar .search:not(.focused):not(.open) .search-bar:not(:hover):not(:focus):not(:active){
+    width:30px;
+    transition:width 100ms linear;
+}
+.header-toolbar .separator+button+button,
+.header-toolbar button:first-child+button+button,
+.header-toolbar button:first-child+button{
+    transition:width 100ms linear;
+    overflow:hidden;
+	margin:0;
+    width:38px;
+    display:flex;
+    justify-content:flex-end;
+}
+.header-toolbar .separator+button:not(:hover)+button:not(:hover),
+.header-toolbar button:first-child:not(:hover)+button:not(:hover)+button:not(:hover),
+.header-toolbar button:first-child:not(:hover)+button:not(:hover){    
+	width:0;
+    transition:width 100ms linear;
+}
+.account {
+	transition: transform 300ms ease;
+    transform:translate(-230px);
+}
+#rtc-connection:hover+.account,
+.account:hover {
+	transition: transform 300ms ease;
+    transform:translate(0px);
+}
+.chat form {
+	transition: all 300ms ease;
+	margin-left:0px;
+}
+.guild-channels-wrapper:hover {
+	border-radius: 0 0 5px 0;
+}
+.flex-vertical .guilds-wrapper {
+    width: 10px;
+    min-width: 0!important;
+    transition: all 300ms ease;
+	z-index:10;
+}
+.guilds-wrapper:hover {
+    width: 70px;
+}
+.channel-members-wrap{
+    width:10px;
+    min-width:10px;
+}
+.channel-members:hover{
+    transform:translate(-230px);
+}
 }
