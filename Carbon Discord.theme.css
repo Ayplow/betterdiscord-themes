@@ -1,7 +1,6 @@
 /*
     CARBON DISCORD
-    Created by mushroomstewart#3338, with help, code, and snippets from other lovely users including:
-        MoreThanTom#0828
+    Created by mushroomstewart#3338 and MoreThanTom#0828, with help, code, and snippets from other lovely users including:
         uri#0002
         Qwerasd#5202
         Arashiryuu#3000
@@ -12,6 +11,13 @@
     For the full theme experience, turn on "BetterDiscord Blue" in Settings > BetterDiscord > Core > Betterdiscord Blue.
 */
 
+*::-webkit-scrollbar {
+    display:none!important;
+}
+
+div.discord-tag.kawaii-tagged > span.kawaii-tag.kawaii-tag-invert {
+    color:#1f1f1f!important;
+}
 
 .message-group .avatar-large {
     transition: all 0.2s ease-in-out !important;
@@ -301,7 +307,7 @@ div.member-activity {
 .ui-scroller-wrap .scroller::-webkit-scrollbar {
     display:none;
 }
-.message-group {
+.message:not(.message-sending):not(.message-send-failed) {
   animation-name: testslide;
   animation-duration: .5s;
   animation-iteration-count: 1!important;
@@ -316,7 +322,7 @@ div.member-activity {
     opacity:0;
   }
   100% {
-    margin-left: 6px;
+    margin-left: 0px;
     opacity:1
   }
 }
@@ -328,24 +334,32 @@ div.member-activity {
         opacity:1;
     }
 }
-.message-group .markup {
-  animation-name: testslide2;
-  animation-duration: .5s;
-  animation-iteration-count: 1!important;
-  animation-timing-function: ease-out;
+
+.message.message-sending {
+    animation: fadeinout 2s infinite ease;
 }
-@keyframes testslide2 {
-  0% {
-    margin-left: -50px;
-    opacity:0;
-  }
-  50% {
-    opacity:0;
-  }
-  100% {
-    margin-left: 0px;
-    opacity:1
-  }
+@keyframes fadeinout {
+    0% {
+        opacity:.5;
+    }
+    25% {
+        opacity:.25;
+    }
+    75% {
+        opacity:.75;
+    }
+    100% {
+        opacity:.5;
+    }
+}
+
+.message.message-send-failed {
+    animation: flashfail .33s 3 ease;
+}
+@keyframes flashfail {
+    0% {}
+    50% {background-color:#f04747;color:#fff!important;}
+    100%{}
 }
 
 .embed-wrapper .embed-color-pill {
@@ -411,9 +425,6 @@ font-size: 13px!important
     color: #f04747!important;
 }
 /* Tweaks to User Popout */
-.kawaii-tag.kawaii-tag-invert {
-    color:#1f1f1f!important;
-}
 .user-popout .avatar-popout {
     border-color:#3f3f3f!important;
 }
@@ -791,6 +802,12 @@ div.react-datepicker__day.react-datepicker__day--outside-month {
     white-space:nowrap;    
 }
 
+.guilds-wrapper > .new-messages-indicator.new-messages-indicator-mention {
+    content:"";
+}
+.guilds-wrapper:hover > div.new-messages-indicator.new-messages-indicator-mention {
+    display:flex;
+}
 
 .new-messages-indicator.new-messages-indicator-mention:not(.bottom) {
     top:0px;
@@ -802,6 +819,12 @@ div.react-datepicker__day.react-datepicker__day--outside-month {
 .message.mentioned.first .message-text:after, .message.mentioned .message-text:after {
     border-left: 4px solid #3A71C1;
     background-color: rgba(58,113,193,.1);
+}
+.markup .mention {
+    background-color:transparent!important;
+}
+.markup .mention:hover {
+    background-color:#3f3f3f!important;
 }
 
 .theme-dark .message-group .mentioned .message-text {
