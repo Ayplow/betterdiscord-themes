@@ -207,6 +207,7 @@ margin: 10px 0 10px;
     min-height:22px;
     margin-top:auto;
     margin-bottom:auto;
+    margin-left:4px;
 }
 .theme-dark .channel-textarea-inner {
     min-height:58px;
@@ -1762,6 +1763,7 @@ padding-left:15px;
     background: transparent;
     border-radius: 5px;
     transition: transform .25s;
+    margin-left:16px;
 }
 
 .header-toolbar:hover:after {
