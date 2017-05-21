@@ -266,6 +266,7 @@ min-height:22px;
     border-top: 1px solid #171717;
     border-left: 1px solid #171717;
     box-shadow: 0 -1px 0 rgba(0,0,0,.1);
+    z-index: 1!important;
 }
 .typing .text {
     padding-right:5px;
