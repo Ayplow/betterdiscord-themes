@@ -81,6 +81,9 @@
     color:#f04747;
     font-weight:bold;
 }
+.guild-channels .badge {
+    left:-12px;
+}
 
 .channel-textarea {
     margin: 0;
@@ -123,9 +126,6 @@ min-height:22px;
     border-top: 1px hsla(0,0%,100%,.06) solid;
     border-left: 1px hsla(0,0%,100%,.06) solid;
     box-shadow: 0 -1px 0 rgba(0,0,0,.1);
-}
-.chat form .typing:hover {
-    height: 0px;
 }
 /*end*/
 
@@ -212,6 +212,7 @@ min-height:22px;
     height: 105% !important;
 }*/
 
+.guild-selected {background:transparent!important;}
 .guild.selected .avatar-small {
     animation-name: spin;
     animation-duration: 2s;
@@ -389,6 +390,92 @@ font-size: 13px!important
     margin-left:6px!important;
 }
 
+/* Tweaks to User Popout */
+
+.user-popout .avatar-popout {
+    border-color:#3f3f3f!important;
+}
+
+#user-profile-modal .header, #user-profile-modal .tab-bar-container, #user-profile-modal .avatar-wrapper, #user-profile-modal .scroller.guilds {
+    background:#2f2f2f!important;
+}
+#user-profile-modal .header:after {
+    background-image:none;
+}
+.user-popout .header, .user-popout .body, .user-popout .footer, .quick-message, .note textarea, #user-profile-modal .empty {
+    background-color: #2f2f2f!important;
+}
+#user-profile-modal .empty-text {
+    color:#dfdfdf!important;
+}
+ .note textarea {
+    color:#dfdfdf;
+ }
+
+.user-popout .header .username-wrapper .discord-tag span,
+.user-popout .header .username-wrapper .activity,
+.section.roles .label, .section.notes .label,
+.protip.inline .tip,
+#user-profile-modal .discord-tag span,
+#user-profile-modal .activity,
+#user-profile-modal .section .section-header,
+.connected-account-name {
+    color:#fff!important;
+    opacity: .9;
+}
+
+.connected-account-open-icon {
+    filter:brightness(2);
+    filter:contrast(5);
+}
+#user-profile-modal .scroller.guilds .section:nth-child(2) {
+    border-top: 1px solid #3f3f3f;
+}
+#user-profile-modal .guilds .section .connected-accounts .connected-account {
+    border: 1px solid #4f4f4f!important;
+}
+.tab-bar-container {
+    border-bottom: 1px solid #3f3f3f!important;
+}
+.tab-bar.TOP .tab-bar-item.selected {
+    color:#fff!important;
+    opacity:.9;
+    border-bottom: 2px solid #3A71C1!important;
+}
+#user-profile-modal .scroller.guilds .guild:hover {
+    background:#3f3f3f!important;
+    color:#fff;
+}
+#user-profile-modal .scroller.guilds .guild {
+    color:#fff!important;
+}
+.popout.popout-bottom .context-menu {
+    background:#2f2f2f!important;
+}
+.popout.popout-bottom .item:hover {
+    background:#3f3f3f;
+}
+.popout.popout-bottom .item:not(danger) {
+    color:#fff;
+}
+
+.quick-message {
+    color:#fff;
+    border: 1px solid #3f3f3f;
+}
+
+.member-role.member-role-add {
+    background:#3f3f3f;
+}
+span.icon.icon-notes, span.icon.icon-roles{display:none;}
+.kawaii-tag.kawaii-tag-invert {
+    color:#1f1f1f!important;
+}
+
+.user-popout .footer, .user-popout .body {
+    border-top: 1px solid #3f3f3f;
+}
+
 /* Fixes Blurple */
 
 .user-popout .avatar-wrapper .avatar-popout {
@@ -451,12 +538,11 @@ font-size: 13px!important
 }
 
 .user-popout .body ::-webkit-scrollbar {
-    width: 12px; }
+    width: 8px; }
 .user-popout .body ::-webkit-scrollbar-thumb,
 .user-popout .body ::-webkit-scrollbar-track-piece{
     background-color: #3a71c1;
     background-clip: padding-box;
-    border: 3px solid #fff;
     border-radius: 7px; }
 .user-popout .body ::-webkit-scrollbar-track-piece {
     background-color: transparent; }
