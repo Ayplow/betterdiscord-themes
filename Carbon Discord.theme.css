@@ -1,6 +1,7 @@
 /*
     CARBON DISCORD
-    Created by mushroomstewart#3338 and MoreThanTom#0828, with help, code, and snippets from other lovely users including:
+    Created by mushroomstewart#3338, with help, code, and snippets from other lovely users including:
+        MoreThanTom#0828
         uri#0002
         Qwerasd#5202
         Arashiryuu#3000
@@ -221,7 +222,7 @@ min-height:22px;
 }*/
 
 .guild-selected {background:transparent!important;}
-.guild.selected .avatar-small {
+.guilds:hover > .guild.selected .avatar-small {
     animation-name: spin;
     animation-duration: 2s;
     animation-iteration-count: infinite!important;
