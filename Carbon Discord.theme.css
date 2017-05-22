@@ -665,7 +665,7 @@ div.react-datepicker__day.react-datepicker__day--outside-month {
 }
 
 .header-toolbar .separator:last-of-type {
-    margin-right: 15px;
+    margin-right: 0;
 }
 /* Dark Popouts (status, server options) */
 .popout-menu-item:not(.leave) {
@@ -1807,7 +1807,7 @@ padding-left:15px;
 .chat .title-wrap{
     min-height:40px;
 }
-.win-buttons
+.win-buttons,
 .osx-buttons,
 .private-channels .search-bar,
 .guild-header{
@@ -1831,4 +1831,3 @@ padding-left:15px;
 .private-channel-call-actions {
     margin-top:10px!important;
 }
-
