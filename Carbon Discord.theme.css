@@ -320,10 +320,7 @@ margin: 10px 0 10px;
 }
 
 
-#charcounter {
-    margin-bottom: 100px;
-    font-size:10px;
-}
+
 .ui-standard-sidebar-view .scroller {
     background-color:#1f1f1f;
 }
@@ -673,6 +670,12 @@ div.react-datepicker__day.react-datepicker__day--outside-month {
 /* Dark Popouts (status, server options) */
 .popout-menu-item:not(.leave) {
     color:#fff!important;
+}
+.popout-menu {
+    background:#2f2f2f;
+}
+.popout-menu .popout-menu-item:hover {
+    background: #3f3f3f;
 }
 .status-picker .helper {
     display:none;
