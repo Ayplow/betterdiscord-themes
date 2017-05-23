@@ -8,16 +8,6 @@
 .channel-textarea-upload:hover {
    border: none !important;
 }
-
-
-.channel-textarea {
-    margin: 0;
-}
-
-.channel-textarea-inner {
-    padding: 8px 4px;
-}
-
 .guilds-wrapper {
     padding-top: 0px !important;
 }
@@ -35,7 +25,9 @@ margin: 10px 0 10px;
     margin-bottom:auto;
     margin-left:4px;
 }
-.theme-dark .channel-textarea-inner {
+.channel-textarea-inner {
+    margin: 0;
+    padding: 8px 4px;
     min-height:58px;
 	border:none;
 }
@@ -55,12 +47,6 @@ margin: 10px 0 10px;
     border-top: 1px #1c1e22 solid;
     border-left: 1px #1c1e22 solid;
     z-index:1;
-}
-.chat form .typing:after{
-	content:"";
-	width:100%;
-	height:27px;
-	bottom:0;
 }
 .chat form .typing:hover {
     height: 0px;
@@ -472,14 +458,14 @@ padding-left:15px;
 }
 .guilds-wrapper .guilds > .guild:first-child,
 .guilds-wrapper .guilds > .guild:first-child .guild-inner a{
-	height:20px;
+	height:22px;
 	display:flex;
 }
 .guilds-wrapper .guilds > .guild:first-child .guild-inner a:after {
 	font-family: 'Material Icons';
 	content: "attachment";
 	font-size:28px;
-	line-height:19px;
+	line-height:20px;
 	height:100%;
 	width:100%;
 }
@@ -494,16 +480,13 @@ padding-left:15px;
     height: 30px;
 }
 .guilds-wrapper .guilds .guild.selected:before {
-//    margin-top: -5px;
+    margin-top: -10px;
 }
 .guilds-wrapper .guilds .guild.selected {
     z-index: 5;
 }
 .guilds-wrapper .guilds .guild.unread:not(.selected)::before {
     margin-top: 5px;
-}
-.guilds-wrapper .guilds .guild.unread:hover:not(.selected)::before {
-//    margin-top: -6px;
 }
 .guilds-wrapper .guild:not(.guilds-add):not(:first-child):not(.dms):hover {
     height: 40px!important;
