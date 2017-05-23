@@ -260,121 +260,6 @@ padding-left:15px;
 .chat .jump-to-present-bar>* {
 	transition:opacity 100ms linear;
 }
-@media screen and (max-height: 550px) {
-.chat .new-messages-bar:not(:hover),
-.chat .jump-to-present-bar:not(:hover) {
-	max-height:10px;
-}
-.chat .new-messages-bar>*:not(:hover),
-.chat .jump-to-present-bar>*:not(:hover) {
-	opacity:0;
-}
-.app .channel-textarea-inner{
-	min-height:30px;
-}
-.chat .private-channel-call:not(:hover){
-	height:10px;
-}
-
-.guild-channels-wrapper:hover+#rtc-connection,
-.private-channels:hover+#rtc-connection {
-	display:none;
-}
-.guild-channels-wrapper:hover+#rtc-connection+.account,
-.private-channels:hover+#rtc-connection+.account {
-    transform:translate(0px);
-}
-}
-@media screen and (max-width: 750px) {
-.avatar-large {
-    display:none;
-}
-.header-toolbar{
-    display:flex;
-    justify-content:flex-end;
-}
-.search-bar{
-    display:flex;
-    justify-content:flex-end;
-    transition:width 100ms linear;
-    overflow:hidden;    
-}
-.header-toolbar .search:not(.focused):not(.open) .search-bar:not(:hover):not(:focus):not(:active){
-    width:30px;
-    transition:width 100ms linear;
-}
-.header-toolbar .separator+button+button,
-.header-toolbar button:first-child+button+button,
-.header-toolbar button:first-child+button{
-    transition:width 100ms linear;
-    overflow:hidden;
-    margin:0;
-    width:38px;
-    display:flex;
-    justify-content:flex-end;
-}
-.header-toolbar .separator+button:not(:hover)+button:not(:hover),
-.header-toolbar button:first-child:not(:hover)+button:not(:hover)+button:not(:hover),
-.header-toolbar button:first-child:not(:hover)+button:not(:hover){    
-    width:0;
-    transition:width 100ms linear;
-}
-.account {
-    transition: transform 300ms ease;
-    transform:translate(-230px);
-}
-#rtc-connection:hover+.account,
-.account:hover {
-    transition: transform 300ms ease;
-    transform:translate(0px);
-}
-.chat form {
-    transition: all 300ms ease;
-    margin-left:0px;
-}
-.guild-channels-wrapper:hover {
-    border-radius: 0 0 5px 0;
-}
-.flex-vertical .guilds-wrapper {
-    width: 10px;
-    min-width: 0!important;
-    transition: all 300ms ease;
-    z-index:10;
-}
-.guilds-wrapper:hover {
-    width: 70px;
-}
-.channel-members-wrap{
-    width:10px;
-    min-width:10px;
-}
-.channel-members:hover{
-    transform:translate(-230px);
-}
-.search-results-wrap{
-    width:10px;
-    min-width:10px;	
-}
-.search-results-wrap:hover .search-header,
-.search-results-wrap:hover .scroller-wrap{
-    transform:translate(-408px);
-}
-/**/
-.popout.popout-bottom-right.no-arrow,
-.popout.popout-bottom.no-shadow.search-popout{
-	top:35px!important;
-	left:10px!important;
-	transform:none!important;
-	width:calc(100% - 20px);
-	height:calc(100% - 75px);
-}
-.popout.popout-bottom-right.no-arrow .messages-popout-wrap,
-.popout.popout-bottom-right.no-arrow .private-channel-recipients-invite {
-	min-height:100%;
-	width:100%;
-	max-height:100%!important;
-}
-}
 .header-toolbar:after{
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent; 
@@ -423,9 +308,11 @@ padding-left:15px;
 .header-toolbar button:nth-of-type(1){
     margin-left:8px;
 }
-.app .chat .title-wrap{
+.app .chat .title-wrap,
+.app .chat .title-wrap.call{
     min-height:41px;
     border-bottom:1px solid var(--main-border-color);
+    border-color:var(--main-border-color);
 }
 .win-buttons,
 .osx-buttons,
@@ -601,9 +488,12 @@ padding-left:15px;
 .app .friends-table,
 .app #friends .friends-header,
 .app #friends,
+.popout.popout-bottom.no-shadow.search-popout,
 .theme-dark .themed-popout .header,
 .theme-dark .themed-popout .footer,
-.theme-dark .chat>.content{
+.theme-dark .chat>.content
+.guild-header header:hover,
+.guild-header.popout-open header{
 	background-color: var(--main-bg-color);
 }
 
@@ -663,8 +553,6 @@ padding-left:15px;
 #rtc-connection .btn,
 .app .channel-textarea-inner,
 .app .chat form .typing,
-.guild-header header:hover,
-.guild-header.popout-open header,
 .guilds-wrapper .guilds .guild .guild-inner:not(:hover){
 	background-color: var(--main-bg-color-2)!important;
 }
@@ -739,4 +627,211 @@ padding-left:15px;
 /**/
 .theme-dark .channel-members-loading {
     display:none!important;
+}
+/* Dark Search and Datepicker */
+
+div.option.selected,
+.ui-calendar-picker .react-datepicker__day--outside-month{
+    background-color:rgba(0,0,0,0.15)!important;
+}
+.search-popout .option:after,
+.search-popout .history:after{
+	display:none;
+}
+.ui-calendar-picker .react-datepicker,
+.react-datepicker__header,
+.option.search-query{
+    background-color: var(--main-bg-color)!important;
+}
+.popout-menu-item:not(.leave),
+.ui-calendar-picker .react-datepicker,
+.react-datepicker__current-month,
+.react-datepicker__day-names, .react-datepicker__header,
+.react-datepicker__day-name,
+.option.search-option .filter,
+.option.history .filter,
+.option.user .displayed-nick,
+.option strong,
+.react-datepicker__day {
+    color:white!important;
+}
+.ui-calendar-picker .react-datepicker__day--outside-month,
+.ui-calendar-picker .react-datepicker__day--disabled{
+	color:rgb(79, 79, 79)!important;
+}
+.option.search-option .answer,
+.option.history .answer,
+.option.history .non-text {
+    color:#9f9f9f!important;
+}
+.search-popout .date-picker {
+    border-top:0px;
+}
+
+.ui-calendar-picker .react-datepicker{
+	width:100%;
+	justify-content:center;
+	display:flex;
+}
+/* Dark Popouts (status, server options) */
+
+.popout-menu {
+    background:var(--main-bg-color);
+}
+.popout-menu .popout-menu-item:hover {
+    background: rgba(0,0,0,0.15);
+}
+.status-picker .helper {
+    display:none;
+}
+.popout-menu-separator {
+    display:none;
+}
+.popout.popout-top{
+    top:initial!important;
+    bottom:59px!important;
+    left:82px!important;
+    transition:width 100ms linear;
+    transform:none!important;
+    box-shadow:none!important;
+}
+.popout.popout-top .popout-menu{
+    border-radius:0;
+    border-top-right-radius:5px;
+    background-color:rgba(0,0,0,0)!important;
+}
+.popout.popout-top .popout-menu .popout-menu-item{
+    width:38px!important;
+    overflow:hidden;
+    background-color:#2f2f2f!important;
+    transition:width 200ms linear, background-color 200ms linear;
+}
+.popout.popout-top .popout-menu .popout-menu-item:hover {
+    width:150px!important;
+    background-color:#3f3f3f!important;
+}
+.popout.popout-top .popout-menu .status-text{
+    white-space:nowrap;    
+}
+.chat form{
+	max-height:59px;
+}
+
+@media screen and (max-height: 550px) {
+.chat .new-messages-bar:not(:hover),
+.chat .jump-to-present-bar:not(:hover) {
+	max-height:10px;
+}
+.chat .new-messages-bar>*:not(:hover),
+.chat .jump-to-present-bar>*:not(:hover) {
+	opacity:0;
+}
+.app .channel-textarea-inner{
+	min-height:30px;
+}
+.chat .private-channel-call:not(:hover){
+	height:10px;
+}
+
+.guild-channels-wrapper:hover+#rtc-connection,
+.private-channels:hover+#rtc-connection {
+	display:none;
+}
+.guild-channels-wrapper:hover+#rtc-connection+.account,
+.private-channels:hover+#rtc-connection+.account {
+    transform:translate(0px);
+}
+}
+@media screen and (max-width: 750px) {
+.avatar-large {
+    display:none;
+}
+.header-toolbar{
+    display:flex;
+    justify-content:flex-end;
+}
+.search-bar{
+    display:flex;
+    justify-content:flex-end;
+    transition:width 100ms linear;
+    overflow:hidden;    
+}
+.header-toolbar .search:not(.focused):not(.open) .search-bar:not(:hover):not(:focus):not(:active){
+    width:30px;
+    transition:width 100ms linear;
+}
+.header-toolbar .separator+button+button,
+.header-toolbar button:first-child+button+button,
+.header-toolbar button:first-child+button{
+    transition:width 100ms linear;
+    overflow:hidden;
+    margin:0;
+    width:38px;
+    display:flex;
+    justify-content:flex-end;
+}
+.header-toolbar .separator+button:not(:hover)+button:not(:hover),
+.header-toolbar button:first-child:not(:hover)+button:not(:hover)+button:not(:hover),
+.header-toolbar button:first-child:not(:hover)+button:not(:hover){    
+    width:0;
+    transition:width 100ms linear;
+}
+.account {
+    transition: transform 300ms ease;
+    transform:translate(-230px);
+}
+#rtc-connection:hover+.account,
+.account:hover {
+    transition: transform 300ms ease;
+    transform:translate(0px);
+}
+.chat form {
+    transition: all 300ms ease;
+    margin-left:0px;
+}
+.guild-channels-wrapper:hover {
+    border-radius: 0 0 5px 0;
+}
+.flex-vertical .guilds-wrapper {
+    width: 10px;
+    min-width: 0!important;
+    transition: all 300ms ease;
+    z-index:10;
+}
+.guilds-wrapper:hover {
+    width: 70px;
+}
+.channel-members-wrap{
+    width:10px;
+    min-width:10px;
+}
+.channel-members:hover{
+    transform:translate(-230px);
+}
+.search-results-wrap{
+    width:10px;
+    min-width:10px;	
+}
+.search-results-wrap:hover .search-header,
+.search-results-wrap:hover .scroller-wrap{
+    transform:translate(-408px);
+}
+/**/
+.popout.popout-bottom-right.no-arrow,
+.popout.popout-bottom.no-shadow.search-popout{
+	top:35px!important;
+	left:10px!important;
+	transform:none!important;
+	width:calc(100% - 20px);
+	height:calc(100% - 75px);
+}
+.popout.popout-bottom-right.no-arrow .messages-popout-wrap,
+.popout.popout-bottom-right.no-arrow .private-channel-recipients-invite {
+	min-height:100%;
+	width:100%;
+	max-height:100%!important;
+}
+.popout.popout-top{
+    left:22px!important;
+}
 }
