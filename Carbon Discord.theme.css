@@ -11,10 +11,6 @@
 .guilds-wrapper {
     padding-top: 0px !important;
 }
-.header-toolbar{
-    margin-right:70px;
-}
-
 /**/
 .channel-textarea {
 margin: 10px 0 10px;
@@ -35,7 +31,6 @@ margin: 10px 0 10px;
     margin-top:auto;
     margin-bottom: auto;
 }
-
 .app .chat form .typing {
     bottom: 100%;
     width: auto;
@@ -44,49 +39,30 @@ margin: 10px 0 10px;
     right:0px;
     transition: height 200ms ease-out;
     border-radius: 5px 0 0 0;
-    border-top: 1px #1c1e22 solid;
-    border-left: 1px #1c1e22 solid;
+    border-top: 1px var(--main-border-color) solid;
+    border-left: 1px var(--main-border-color) solid;
     z-index:1;
 }
 .chat form .typing:hover {
     height: 0px;
 }
 /*end*/
-
 .theme-dark .channel-textarea-inner .channel-textarea-upload:hover{
     background-color:transparent;
 }
-
 .theme-dark .channel-textarea-inner .channel-textarea-upload {
     left:6px;
     top:1px;
 }
-
-
 .channels-wrap .scroller {
     overflow-x: hidden;
 }
-
-
-
-
 .guilds-wrapper ::-webkit-scrollbar {
     display: none;
 }
 .header-toolbar .separator:last-of-type {
     margin-right: 0;
 }
-.guild-header header:hover,
-.guild-header.popout-open header{
-/    background-color:#171717;
-    background-color:#25272b;
-    }
-
-.guild-header header{
-/    background-color:#171717;
-    background-color:#2e3136;
-/    box-shadow:0 1px 0 rgba(0, 0, 0, 0.2),inset 0 -1px 0 rgba(0, 0, 0, .1);
-    }
 .flex-vertical .channels-wrap {
     width: 10px;
     min-width: 0!important;
@@ -96,29 +72,26 @@ margin: 10px 0 10px;
  .private-channels   {
     transition: all 300ms ease;
     width:11px;
-    z-index:1;
+    z-index:200;
 }
 .guild-channels-wrapper:hover,
 .private-channels:hover {
     transition: all 300ms ease;
     width:241px;
-    z-index:200;
 }
 .account {
     transition: transform 300ms ease;
     transform:translate(0px);
     width:220px;
+    height:58px;
     z-index:9;
-/    background: #1a1a1a;
+	border-top:1px solid var(--main-border-color);
 }
 .chat form {
     transition: all 300ms ease;
     margin: 0;
     margin-left:230px;
-    border-top:1px solid #1c1e22!important;
-}
-.account{
-    height:58px;
+    border-top:1px solid var(--main-border-color)!important;
 }
 
 .channels-wrap #rtc-connection,
@@ -126,22 +99,17 @@ margin: 10px 0 10px;
 .channels-wrap .private-channels,
 .channels-wrap .guild-channels{
     position:relative;
-    border-right:1px solid #1c1e22;
+    border-right:1px solid var(--main-border-color);
 }
 
 #rtc-connection {
     transition: transform 300ms ease;
-    transform:translate(0px);
+    transform:translate(-230px);
     width:220px;
     z-index:9;
-/    background: #1a1a1a;
-}
-#rtc-connection {
-    transition: transform 300ms ease;
-    transform:translate(-230px);
+	border-top:1px solid var(--main-border-color);
 }
 #rtc-connection:hover {
-    transition: transform 300ms ease;
     transform:translate(0px);
 }
 .channels-wrap #rtc-connection{
@@ -168,7 +136,7 @@ margin: 10px 0 10px;
     transition:width 250ms ease;
     border:none;
     border-radius:0;
-    border-left:1px solid #1c1e22;
+    border-left:1px solid var(--main-border-color);
 }
 .channels-wrap .account .btn-group{
     position: absolute;
@@ -179,7 +147,7 @@ margin: 10px 0 10px;
     transition:width 250ms ease;
     border:none;
     border-radius:0;
-    border-left:1px solid #1c1e22;
+    border-left:1px solid var(--main-border-color);
 }
 .channels-wrap .account:hover .btn-group,
 .channels-wrap #rtc-connection:hover+.account .btn-group,
@@ -262,14 +230,12 @@ padding-left:15px;
     z-index:1000;
 	width:378px;
     transition:transform 300ms ease;
-	background-color: #2e3136;
 }
 .search-results-wrap .scroller-wrap{
     transform:translate(0px);
     z-index:1000;
 	width:418px;
     transition:transform 300ms ease;
-	background-color: #2e3136;
 }
 .search-results-wrap:hover .search-header,
 .search-results-wrap:hover .scroller-wrap{
@@ -426,13 +392,15 @@ padding-left:15px;
 .header-toolbar button:nth-of-type(1){
     margin-left:8px;
 }
-.chat .title-wrap{
+.app .chat .title-wrap{
     min-height:40px;
+	border-bottom:none;
 }
 .win-buttons,
 .osx-buttons,
 .private-channels .search-bar,
-.guild-header{
+.guild-header,
+#friends .friends-header{
     min-height:40px;
     height:40px;
 }
@@ -576,4 +544,98 @@ padding-left:15px;
     left: 1px;
     top: 1px;
 }
-/*end*/
+/*Coloring*/
+:root{
+	--main-border-color:#4f4f4f;
+	--main-bg-color: #1f1f1f;
+	--main-bg-color-1:#1b1b1b;
+	--main-bg-color-2:#2c2c2c;
+	--main-bg-color-3:#0f0f0f;
+}
+
+.app .title-wrap,
+.app .header-toolbar,
+.app .messages-wrapper,
+.app .ui-standard-sidebar-view .content-region,
+.app .friends-table,
+.app #friends .friends-header,
+.app #friends{
+	background-color: var(--main-bg-color);
+}
+
+.private-channels,
+.private-channels .search-bar,
+.guild-channels,
+.guild-header header,
+.app .channel-members,
+.app .search-results-wrap .search-header,
+.search-results-wrap .scroller-wrap,
+.app .search-results-wrap .channel-separator .channel-name,
+.app .search-results-wrap .search-result .hit,
+.account,
+#rtc-connection,
+.content-region .CodeMirror{
+	background-color: var(--main-bg-color-1);	
+}
+
+.theme-dark .search-results-wrap .search-result:before{
+	background-image:linear-gradient(0deg,rgba(46,49,54,0) 0,var(--main-bg-color-1) 100%)!important;
+}
+.theme-dark .search-results-wrap .search-result:after{
+	background-color:linear-gradient(180deg,rgba(46,49,54,0) 0,var(--main-bg-color-1) 100%)!important;
+}
+.theme-dark .search-results-wrap .search-result .hit{
+	box-shadow: 0 0 10px 6px var(--main-bg-color-1);
+}
+.theme-dark .search-results-wrap .search-result .search-result-message.hit{
+	border:2px solid var(--main-bg-color-1);
+}
+.app .chat .divider div,
+.app .chat .divider span{
+	background-color: var(--main-border-color)!important;
+}
+.private-channels .channel.selected,
+.guild-channels .channel.selected{
+	background:linear-gradient(to right,rgba(0,0,0,0.15) 85%,transparent);
+}
+.private-channels .channel:hover,
+.guild-channels .channel:hover{
+	background:linear-gradient(to right,rgba(0,0,0,0.07) 85%,transparent);	
+}
+.account .btn,
+#rtc-connection .btn,
+.app .channel-textarea-inner,
+.chat .typing,
+.guild-header header:hover,
+.guild-header.popout-open header{
+	background-color: var(--main-bg-color-2);
+}
+.guilds-wrapper,
+.app .ui-standard-sidebar-view .sidebar-region{
+	background-color: var(--main-bg-color-3);
+}
+	
+.private-channels .search-bar{
+	box-shadow:none;
+    border-bottom:1px solid var(--main-border-color);
+}
+.guild-header{
+    border-right:1px solid var(--main-border-color);
+	overflow:hidden;
+}
+/**/
+.scroller.guild-channels:not(:hover)::-webkit-scrollbar,.private-channels:not(:hover) .scroller::-webkit-scrollbar {
+	display: none !important;
+}
+*::-webkit-scrollbar {
+	width:12px!important;
+}
+*::-webkit-scrollbar-thumb {
+    border-color:rgba(0,0,0,0.03)!important;
+    background-color:rgba(0,0,0,0.15)!important;
+}
+*::-webkit-scrollbar-track-piece {
+    background-color: transparent!important;
+    border-color:transparent!important;
+}
+/**/
